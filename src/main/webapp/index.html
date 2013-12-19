@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <title>Sprite Foundry</title>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.8.18.custom.min.js"></script>
+    <script type="text/javascript" src="js/trimpath.js"></script>
+    <script type="text/javascript" src="js/jquery.holyavenger.js"></script>
+    <script type="text/javascript" src="js/jquery.holyavenger.trimpath.js"></script>
+    <script type="text/javascript" src="js/jquery.ba-hashchange.min.js"></script>
+    <script type="text/javascript" src="js/jquery.holycomponents.js"></script>
+    <script type="text/javascript" src="js/jquery.dialog.js"></script>
+    <script type="text/javascript" src="js/jquery.datatable.js"></script>
+    <script type="text/javascript" src="js/jquery.loading.js"></script>
+    <script type="text/javascript" src="js/jquery.tipsy.js"></script>
+    <script type="text/javascript" src="js/jquery.foundry.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/spriteeditor.js"></script>
+    <script type="text/javascript" src="js/spriteeditorexporter.js"></script>
+    <script type="text/javascript" src="js/spriteeditorhandlingfunctions.js"></script>
+    <script type="text/javascript" src="js/spriteeditorshotkeys.js"></script>
+    <script type="text/javascript" src="js/graphics.js"></script>
+    <script type="text/javascript" src="js/farbtastic.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="css/main.css"/> 
+    <link type="text/css" rel="stylesheet" href="css/jquery.dialog.css"/>
+    <link type="text/css" rel="stylesheet" href="css/jquery.datatable.css"/>
+    <link type="text/css" rel="stylesheet" href="css/jquery.loading.css"/>
+    <link type="text/css" rel="stylesheet" href="css/jquery.tipsy.css"/>
+    <link type="text/css" rel="stylesheet" href="css/farbtastic.css"/>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="toptoolbar">
+            <div class="userlogpanel allborder">
+                <a href="/s/login">Log with your google account</a>
+            </div>
+            <div class="newsprite allborder">
+                <a href="#">Create new spritesheet</a>
+            </div>
+        </div>
+        <div class="content"></div>
+    </div>
+    <div class="newSpriteDialog">
+        <h3>New Sprite</h3>
+        Name: <input type="text" class="name"/> <br />
+        Width: <input type="text" class="spriteWidth"/> <br />
+        Height: <input type="text" class="spriteHeight"/> <br />
+        Rows: <input type="text" class="spriteRows"/> <br />
+        Collumns: <input type="text" class="spriteCollumns"/> <br />
+        <input type="button" value="OK" class="okbutton"/>
+        <div class='preview'>
+            <h3>Preview</h3>
+            <div class="proportion"> Cells <span/></div>
+            <canvas/>
+        </div>
+    </div>
+</body>
+</html>

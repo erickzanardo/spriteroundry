@@ -1,0 +1,100 @@
+<engine>
+    <template selector=".content">
+        <div class="namecontainer">
+            <h3>${param.name}</h3>
+        </div>
+        <div class="sidebar allborder">
+            <div class="options allborder">
+                <img src="/imgs/up.png" class="up"/>
+                <img src="/imgs/down.png" class="down"/>
+                <img src="/imgs/trash.png" class="trash"/>
+            </div>
+        </div>
+        <div class="canvas">
+            <div class="tollbar">
+                {if spritefoundry.user}
+                <input type="button" value="Save" class="saveButton ttip" original-title="Shift + S"/>
+                {/if}
+                <input type="button" value="New Frame" class="newButton ttip" original-title="Shift + N"/>
+                <input type="button" value="Copy Sprite" class="copySpriteButton ttip" original-title="Copy the current selected frame"/>
+                |
+                <input type="button" value="Export SpriteSheet" class="exportSpriteButton ttip" original-title="Show an image with all frames"/>
+                <input type="button" value="Animate" class="animationSpriteButton"/>
+            </div>
+
+            <div class="colors allborder">
+                <ul/>
+                <img src="/imgs/color.png" class="ttip" original-title="New palette color"/>
+            </div>
+            <div class="board allborderbig">
+                <div class="toolbar allborder simpletoolbar">
+                    <img src="/imgs/brush.png" class="selected brush ttip" original-title="Shift + B"/>
+                    <img src="/imgs/eraser.png" class="eraser ttip" original-title="Shift + E"/>
+                    <img src="/imgs/fill.png" class="fill ttip" original-title="Shift + F"/>
+                    <img src="/imgs/move.png" class="move ttip" original-title="Shift + M"/>
+                </div>
+
+                <div class="handlingtollbar allborder simpletoolbar">
+                    <img src="/imgs/invertx.png" class="invertx ttip" original-title="Invert horizontally | Shift + X"/>
+                    <img src="/imgs/inverty.png" class="inverty ttip" original-title="Invert vertically | Shift + Y"/>
+                    <img src="/imgs/translate.png" class="translate ttip" original-title="Move the image's pixels"/>
+                </div>
+
+                <div class="righttoolbar allborder simpletoolbar">
+                    <div>
+                        <img src="/imgs/grid.png"/>
+                        <input type="checkbox" class="showgrid"/>
+                    </div>
+                    <div>
+                        <img src="/imgs/viewlayer.png"/>
+                        <input type="checkbox" class="viewlayer"/>
+                    </div>
+                </div>
+                <div class="zoombar allborder simpletoolbar">
+                    <span class="zoom"><input value="0"/>%</span>
+                    <img class="in" src="/imgs/zoomin.png"/>
+                    <img class="reset" src="/imgs/zoomreset.png"/>
+                    <img class="out" src="/imgs/zoomout.png"/>
+                </div>
+            </div>
+        </div>
+        <div class="currentcolor ttip allborderbig" original-title="Change this color"/>
+        <div class="savedinfo allborder">
+            <img src="/imgs/saved.png" />
+            Saved!
+        </div>
+        <div class="translatedialog">
+            <p>
+                Choose how many pixel and the directions to translate
+            </p>
+            <table>
+                <tr>
+                    <td/>
+                    <td><span>Up</span> <input class="up" type="text"/></td>
+                    <td/>
+                </tr>
+                <tr>
+                    <td><span>Left</span> <input class="left" type="text"/></td>
+                    <td/>
+                    <td><span>Right</span> <input class="right" type="text"/></td>
+                </tr>
+                <tr>
+                    <td/>
+                    <td><input class="down" type="text"/> <span>Down</span></td>
+                    <td/>
+                </tr>
+            </table>
+            <div class="buttons">
+                <input type="button" value="Ok" class="ok"/>
+                <input type="button" value="Cancel" class="cancel"/>
+            </div>
+        </div>
+    </template>
+    <script>
+        <![CDATA[
+            $(".translatedialog").hide();
+            $(".ttip").tipsy();
+            spriteEditorBinds(this.param);
+        ]]>
+    </script>
+</engine>

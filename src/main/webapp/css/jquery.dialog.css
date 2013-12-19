@@ -1,0 +1,5 @@
+.dialogBox { background: #FFF; padding: 10px; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; border: 1px solid #A1A1A1;}
+
+.dialogBox .close { display:block; width:22px; height:22px; line-height:20px; text-align:center; background: #000; position: absolute; right: -8px; top:-27px; color:#FFF; font-weight: bold; font-size: 11px; text-decoration: none; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; border: 1px solid #A1A1A1;}
+
+.dOverlay { height: 100%; left: 0; opacity: 0.5; position: fixed; top: 0; width: 100%; background: #000; border: none;}

@@ -1,0 +1,87 @@
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<!-- <servlet> <servlet-name>DocServlet</servlet-name> <servlet-class>com.googlecode.restitory.gae.filter.DocServlet</servlet-class> 
+		</servlet> <servlet-mapping> <servlet-name>DocServlet</servlet-name> <url-pattern>/*</url-pattern> 
+		</servlet-mapping> <filter> <filter-name>JsonProtocolFilter</filter-name> 
+		<filter-class>com.googlecode.restitory.gae.filter.JsonProtocolFilter</filter-class> 
+		</filter> <filter-mapping> <filter-name>JsonProtocolFilter</filter-name> 
+		<url-pattern>/*</url-pattern> </filter-mapping> -->
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+	<listener>
+		<listener-class>br.com.foundry.web.FoundryContextListener</listener-class>
+	</listener>
+
+	<!-- servlet>
+		<servlet-name>default</servlet-name>
+		<init-param>
+			<param-name>useFileMappedBuffer</param-name>
+			<param-value>false</param-value>
+		</init-param>
+	</servlet -->
+	<servlet>
+		<servlet-name>UserLoginServlet</servlet-name>
+		<servlet-class>br.com.foundry.web.login.UserLoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UserLoginServlet</servlet-name>
+		<url-pattern>/s/login</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LoggedUserServlet</servlet-name>
+		<servlet-class>br.com.foundry.web.login.LoggedUserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoggedUserServlet</servlet-name>
+		<url-pattern>/s/loggeduser</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>LogOutServlet</servlet-name>
+		<servlet-class>br.com.foundry.web.login.LogOutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LogOutServlet</servlet-name>
+		<url-pattern>/s/logout</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>JsonServlet</servlet-name>
+		<servlet-class>com.googlecode.restitory.api.servlet.JsonServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>JsonServlet</servlet-name>
+		<url-pattern>/r/*</url-pattern>
+	</servlet-mapping>
+
+	<filter>
+		<filter-name>SecurityFilter</filter-name>
+		<filter-class>br.com.foundry.web.SecurityFilter</filter-class>
+		<init-param>
+			<param-name>permittedUrls</param-name>
+			<param-value>["/r/spritesheet"]</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>SecurityFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>JsonServiceFilter</filter-name>
+		<filter-class>com.googlecode.restitory.api.servlet.JsonServiceFilter</filter-class>
+		<init-param>
+			<param-name>service</param-name>
+			<param-value>br.com.foundry.web.security.SecurityJsonService</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>JsonServiceFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+</web-app>

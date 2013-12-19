@@ -1,0 +1,182 @@
+* {font-family: verdana; font-size: 12px;}
+
+h4, h3, h2, h1 {color: #555555; font-weight: bold;}
+
+h1 {font-size: 36px;}
+
+h2 {font-size: 24px;}
+
+h3 {font-size: 16px;}
+
+h4 {font-size: 14px;}
+
+.id {display: none;}
+
+a {font-weight: bold; color: #ababab;}
+
+body {background-color: #272727;}
+
+div.wrapper {width: 1024px; height: 98%; position: absolute; margin-left: -512px; left: 50%; background-color: #FFF; overflow: auto;}
+
+div.content {width: 100%;}
+
+div.toptoolbar {width: 100%; height: 30px; margin-top: 10px;}
+
+div.toptoolbar div {float: right; border: none; margin-left: 10px; background-color: #000; margin-right: 10px; height: 25px; padding-top: 7px; padding-left: 10px; padding-right: 10px; color: #FFF; margin-right: 25px;}
+
+div.content .mainwrapper {text-align: center; width: 100%;}
+
+div.content .mainwrapper .mainlogo {text-align: center; padding-top: 50px;}
+
+div.content .mainwrapper .learnmore {margin-top: 20px; font-size: 36px;}
+
+div.userlogpanel {display: none;}
+
+div.userlogpanel a.logout {position: absolute; right: 0px; top: 13px;}
+
+ul li {list-style: none;}
+
+div.sidebar {width: 161px; float: left; height: 600px; margin-left: 15px; margin-right: 5px; overflow: auto; position: relative; background-color: #F1F1F1;}
+
+div.sidebar img.item {max-width: 140px; margin: 3px; border: 1px solid #e5e5e5; cursor: pointer; display: block; background-color: #FFF; opacity: 0.5;}
+
+div.sidebar img.item.selected {opacity: 1;}
+
+div.sidebar div.options {display: none; width: 136px; position: absolute; margin-left: 5px; background-color: #e1e1e1; border: 1px solid #000;}
+
+div.sidebar div.options img {cursor: pointer;}
+
+div.sidebar div.options img.trash {float: right; margin-top: 2px; margin-right: 2px;}
+
+div.sidebar div.options img.down {margin-top: 3px;}
+
+div.canvas {float: left; min-height: 600px; width: 800px;}
+
+div.canvas div.colors {height: 20px; margin: 5px; background-color: #F1F1F1; padding: 2px;}
+
+div.canvas div.colors img {cursor: pointer; float: right; margin-top: 2px; margin-right: 2px;}
+
+div.canvas div.colors ul {padding: 0; display: block; margin: 0;}
+
+div.canvas div.colors ul li {display: block; width: 15px; height: 15px; float: left; margin: 2px; cursor: pointer;}
+
+div.canvas div.colors ul li.selected {border: 1px solid #1c1f96;}
+
+div.canvas div.tollbar {height: 30px; margin: 5px;}
+
+div.canvas div.board {height: 525px; margin: 5px; width: 788px; position: relative; overflow: hidden; background-color: #f1f1f1;}
+
+div.canvas div.board canvas {border: 1px solid #a5a5a5; background-color: #fff;}
+
+/*Toolbars*/
+div.canvas div.board div.simpletoolbar {background-color: #e1e1e1; border-color: #a1a1a1; margin-top: 15px;}
+
+div.canvas div.board .toolbar { margin-left: 10px; top: 5px; position: absolute;}
+
+div.canvas div.board .toolbar img {display: block; cursor: pointer; margin: 5px; border-bottom: 1px solid transparent; opacity: 0.5;}
+
+div.canvas div.board .toolbar img.selected {opacity: 1; }
+
+div.canvas div.board .handlingtollbar { margin-left: 10px; margin-top: 5px; position: absolute; top: 140px;}
+
+div.canvas div.board .handlingtollbar img {display: block; cursor: pointer; margin: 5px;}
+
+div.canvas div.board .righttoolbar {right: 10px; top: 5px; position: absolute;}
+
+div.canvas div.board .righttoolbar div {border: none; padding: 1px;}
+
+div.canvas div.board .righttoolbar div img {float: left};
+
+div.canvas div.board .righttoolbar div input[type=checkbox] {float: left; margin-top: 5px;}
+
+div.canvas div.board .zoombar {right: 10px; position: absolute; top: 55px;}
+
+div.canvas div.board .zoombar span.zoom {display: block; text-align: center; margin: 5px;}
+
+div.canvas div.board .zoombar span.zoom input {width: 50px; text-align: right;}
+
+div.canvas div.board .zoombar img {cursor: pointer; margin: 2px;}
+/*Toolbars*/
+
+div.currentcolor {position: fixed; top: 10px; right: 120px; width: 50px; height: 50px; cursor: pointer; border: 12px solid #e5e5e5;}
+
+div.savedinfo {text-align: center; position: fixed; top: 105px; right: 120px; width: 60px; height: 80px; display: none; background-color: #555; color: #fff; font-weight: bold;}
+
+div.savedinfo img {margin-bottom: 5px;}
+
+div.deletedinfo {text-align: center; position: fixed; top: 70px; right: 110px; width: 80px; height: 90px; display: none;  background-color: #555; color: #fff; font-weight: bold;}}
+
+div.deletedinfo img {margin-bottom: 5px;}
+
+div.colorpicker div.preview {width: 188px; height: 30px; margin: 5px;}
+
+div.newSpriteDialog {display: none;}
+
+div.newSpriteDialog div.preview {display: none; position: absolute; right: -50; top: 0px; background-color: #FFF; padding: 5px;}
+
+div.newSpriteDialog input[type=text] {float: right; width: 150px; margin-left: 15px; margin-bottom: 5px;}
+
+div.newSpriteDialog input[type=button] {margin-top: 10px; float: right;}
+
+div.newSpriteDialog br {clear: both;}
+
+div.namecontainer {padding-left: 15px; cursor: pointer;}
+
+.upperborder {-webkit-border-top-left-radius: 5px; -webkit-border-top-right-radius: 5px; -moz-border-radius-topleft: 5px; -moz-border-radius-topright: 5px; border-top-left-radius: 5px; border-top-right-radius: 5px;}
+
+.allborder {-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; border: 1px solid #A1A1A1;}
+
+.allborderbig {-webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; border: 1px solid #A1A1A1;}
+
+/*Button*/
+input[type=button] {
+    -moz-box-shadow:inset 0px 1px 0px 0px #0a060a;
+    -webkit-box-shadow:inset 0px 1px 0px 0px #0a060a;
+    box-shadow:inset 0px 1px 0px 0px #0a060a;
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5e5c5e), color-stop(1, #4d484d) );
+    background:-moz-linear-gradient( center top, #5e5c5e 5%, #4d484d 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5e5c5e', endColorstr='#4d484d');
+    background-color:#5e5c5e;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    border:1px solid #000000;
+    display:inline-block;
+    color:#ffffff;
+    font-family:arial;
+    font-size:15px;
+    font-weight:bold;
+    padding:2px 24px;
+    text-decoration:none;
+    text-shadow:1px 1px 0px #000000;
+    margin: 1px;
+    cursor: pointer;
+}
+input[type=button]:hover {
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #4d484d), color-stop(1, #5e5c5e) );
+    background:-moz-linear-gradient( center top, #4d484d 5%, #5e5c5e 100% );
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d484d', endColorstr='#5e5c5e');
+    background-color:#4d484d;
+}
+input[type=button]:active {
+    position:relative;
+    top:1px;
+}
+
+.innercontent {padding: 15px;}
+
+.inputDialog {padding: 10px;}
+
+.inputDialog input[type=text] {width: 100%; margin-bottom: 10px;}
+
+.confirmDialog div {padding: 10px;}
+
+.translatedialog table {margin-left: 75px; margin-bottom: 15px; margin-top: 15px;}
+
+.translatedialog table tr td span {display: block; width: 50px; text-align: center;}
+
+.translatedialog table tr td input {width: 50px;}
+
+.translatedialog .buttons {text-align: right;}
+
+.aboutimage {max-width: 960px;}

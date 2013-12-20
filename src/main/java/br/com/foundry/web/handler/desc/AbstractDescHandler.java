@@ -1,4 +1,4 @@
-package com.reddrummer.web.handler.desc;
+package br.com.foundry.web.handler.desc;
 
 import java.util.HashSet;
 import java.util.Set;

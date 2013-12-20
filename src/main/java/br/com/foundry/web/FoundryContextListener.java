@@ -4,10 +4,10 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 
 import br.com.foundry.web.handler.SpriteSheetHandler;
+import br.com.foundry.web.handler.desc.SpriteSheetDescHandler;
 import br.com.foundry.web.security.SpriteSheetSecurityHandler;
 
 import com.googlecode.restitory.api.gae.JsonCallbackHandler;
-import com.reddrummer.web.handler.desc.SpriteSheetDescHandler;
 
 public class FoundryContextListener implements ServletContextListener {
 

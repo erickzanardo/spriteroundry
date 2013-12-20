@@ -1,4 +1,4 @@
-package com.reddrummer.web.handler.desc;
+package br.com.foundry.web.handler.desc;
 
 
 import br.com.foundry.web.handler.PostLoadCallback;

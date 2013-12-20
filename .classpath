@@ -1,0 +1,209 @@
+<classpath>
+  <classpathentry kind="src" path="src/test/java" output="target/test-classes" including="**/*.java"/>
+  <classpathentry kind="src" path="src/test/resources" output="target/test-classes" excluding="**/*.java"/>
+  <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
+  <classpathentry kind="src" path="src/main/resources" excluding="**/*.java"/>
+  <classpathentry kind="output" path="target/classes"/>
+  <classpathentry kind="var" path="M2_REPO/javax/jdo/jdo2-api/2.3-eb/jdo2-api-2.3-eb.jar" sourcepath="M2_REPO/javax/jdo/jdo2-api/2.3-eb/jdo2-api-2.3-eb-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/javax/jdo/jdo2-api/2.3-eb/jdo2-api-2.3-eb-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/javax/annotation/jsr250-api/1.0/jsr250-api-1.0.jar" sourcepath="M2_REPO/javax/annotation/jsr250-api/1.0/jsr250-api-1.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/javax/transaction/jta/1.1/jta-1.1.jar" sourcepath="M2_REPO/javax/transaction/jta/1.1/jta-1.1-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar" sourcepath="M2_REPO/javax/servlet/servlet-api/2.5/servlet-api-2.5-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/javax/transaction/transaction-api/1.1/transaction-api-1.1.jar" sourcepath="M2_REPO/javax/transaction/transaction-api/1.1/transaction-api-1.1-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/antlr/antlr/2.7.6/antlr-2.7.6.jar" sourcepath="M2_REPO/antlr/antlr/2.7.6/antlr-2.7.6-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/google/appengine/appengine-api-1.0-sdk/1.6.2.1/appengine-api-1.0-sdk-1.6.2.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/google/appengine/appengine-api-labs/1.6.2.1/appengine-api-labs-1.6.2.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/google/appengine/appengine-api-stubs/1.6.2.1/appengine-api-stubs-1.6.2.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/google/appengine/appengine-testing/1.6.2.1/appengine-testing-1.6.2.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/google/appengine/appengine-tools-sdk/1.6.2.1/appengine-tools-sdk-1.6.2.1.jar"/>
+  <classpathentry kind="var" path="M2_REPO/asm/asm/3.1/asm-3.1.jar" sourcepath="M2_REPO/asm/asm/3.1/asm-3.1-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/cglib/cglib/2.2/cglib-2.2.jar" sourcepath="M2_REPO/cglib/cglib/2.2/cglib-2.2-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/cglib/cglib/2.2/cglib-2.2-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/commons-codec/commons-codec/1.4/commons-codec-1.4.jar" sourcepath="M2_REPO/commons-codec/commons-codec/1.4/commons-codec-1.4-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/commons-codec/commons-codec/1.4/commons-codec-1.4-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/commons-collections/commons-collections/3.1/commons-collections-3.1.jar" sourcepath="M2_REPO/commons-collections/commons-collections/3.1/commons-collections-3.1-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/commons-collections/commons-collections/3.1/commons-collections-3.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/commons-fileupload/commons-fileupload/1.2.1/commons-fileupload-1.2.1.jar" sourcepath="M2_REPO/commons-fileupload/commons-fileupload/1.2.1/commons-fileupload-1.2.1-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/commons-fileupload/commons-fileupload/1.2.1/commons-fileupload-1.2.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/commons-io/commons-io/1.3.2/commons-io-1.3.2.jar" sourcepath="M2_REPO/commons-io/commons-io/1.3.2/commons-io-1.3.2-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/commons-io/commons-io/1.3.2/commons-io-1.3.2-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar" sourcepath="M2_REPO/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/google/appengine/orm/datanucleus-appengine/1.0.10/datanucleus-appengine-1.0.10.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/datanucleus/datanucleus-core/1.1.5/datanucleus-core-1.1.5.jar" sourcepath="M2_REPO/org/datanucleus/datanucleus-core/1.1.5/datanucleus-core-1.1.5-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/datanucleus/datanucleus-jpa/1.1.5/datanucleus-jpa-1.1.5.jar" sourcepath="M2_REPO/org/datanucleus/datanucleus-jpa/1.1.5/datanucleus-jpa-1.1.5-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar" sourcepath="M2_REPO/dom4j/dom4j/1.6.1/dom4j-1.6.1-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jdt/core/compiler/ecj/3.5.1/ecj-3.5.1.jar" sourcepath="M2_REPO/org/eclipse/jdt/core/compiler/ecj/3.5.1/ecj-3.5.1-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/net/sf/flexjson/flexjson/2.1/flexjson-2.1.jar" sourcepath="M2_REPO/net/sf/flexjson/flexjson/2.1/flexjson-2.1-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/net/sf/flexjson/flexjson/2.1/flexjson-2.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/apache/geronimo/specs/geronimo-jpa_3.0_spec/1.1.1/geronimo-jpa_3.0_spec-1.1.1.jar" sourcepath="M2_REPO/org/apache/geronimo/specs/geronimo-jpa_3.0_spec/1.1.1/geronimo-jpa_3.0_spec-1.1.1-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/org/apache/geronimo/specs/geronimo-jpa_3.0_spec/1.1.1/geronimo-jpa_3.0_spec-1.1.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1.jar" sourcepath="M2_REPO/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/org/apache/geronimo/specs/geronimo-jta_1.1_spec/1.1.1/geronimo-jta_1.1_spec-1.1.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/google/code/gson/gson/1.7.1/gson-1.7.1.jar" sourcepath="M2_REPO/com/google/code/gson/gson/1.7.1/gson-1.7.1-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/com/google/code/gson/gson/1.7.1/gson-1.7.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/hibernate/hibernate-annotations/3.5.1-Final/hibernate-annotations-3.5.1-Final.jar" sourcepath="M2_REPO/org/hibernate/hibernate-annotations/3.5.1-Final/hibernate-annotations-3.5.1-Final-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/hibernate/hibernate-commons-annotations/3.2.0.Final/hibernate-commons-annotations-3.2.0.Final.jar" sourcepath="M2_REPO/org/hibernate/hibernate-commons-annotations/3.2.0.Final/hibernate-commons-annotations-3.2.0.Final-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/org/hibernate/hibernate-commons-annotations/3.2.0.Final/hibernate-commons-annotations-3.2.0.Final-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/hibernate/hibernate-core/3.5.1-Final/hibernate-core-3.5.1-Final.jar" sourcepath="M2_REPO/org/hibernate/hibernate-core/3.5.1-Final/hibernate-core-3.5.1-Final-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/hibernate/hibernate-entitymanager/3.5.1-Final/hibernate-entitymanager-3.5.1-Final.jar" sourcepath="M2_REPO/org/hibernate/hibernate-entitymanager/3.5.1-Final/hibernate-entitymanager-3.5.1-Final-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.0.Final/hibernate-jpa-2.0-api-1.0.0.Final.jar" sourcepath="M2_REPO/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.0.Final/hibernate-jpa-2.0-api-1.0.0.Final-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.0.Final/hibernate-jpa-2.0-api-1.0.0.Final-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/apache/httpcomponents/httpclient/4.1.1/httpclient-4.1.1.jar" sourcepath="M2_REPO/org/apache/httpcomponents/httpclient/4.1.1/httpclient-4.1.1-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/httpcomponents/httpcore/4.1/httpcore-4.1.jar" sourcepath="M2_REPO/org/apache/httpcomponents/httpcore/4.1/httpcore-4.1-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/javassist/javassist/3.9.0.GA/javassist-3.9.0.GA.jar" sourcepath="M2_REPO/javassist/javassist/3.9.0.GA/javassist-3.9.0.GA-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-continuation/7.4.0.v20110414/jetty-continuation-7.4.0.v20110414.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-continuation/7.4.0.v20110414/jetty-continuation-7.4.0.v20110414-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/org/eclipse/jetty/jetty-continuation/7.4.0.v20110414/jetty-continuation-7.4.0.v20110414-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-deploy/7.4.0.v20110414/jetty-deploy-7.4.0.v20110414.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-deploy/7.4.0.v20110414/jetty-deploy-7.4.0.v20110414-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/org/eclipse/jetty/jetty-deploy/7.4.0.v20110414/jetty-deploy-7.4.0.v20110414-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-http/7.4.0.v20110414/jetty-http-7.4.0.v20110414.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-http/7.4.0.v20110414/jetty-http-7.4.0.v20110414-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/org/eclipse/jetty/jetty-http/7.4.0.v20110414/jetty-http-7.4.0.v20110414-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-io/7.4.0.v20110414/jetty-io-7.4.0.v20110414.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-io/7.4.0.v20110414/jetty-io-7.4.0.v20110414-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/org/eclipse/jetty/jetty-io/7.4.0.v20110414/jetty-io-7.4.0.v20110414-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-security/7.4.0.v20110414/jetty-security-7.4.0.v20110414.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-security/7.4.0.v20110414/jetty-security-7.4.0.v20110414-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/org/eclipse/jetty/jetty-security/7.4.0.v20110414/jetty-security-7.4.0.v20110414-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-server/7.4.0.v20110414/jetty-server-7.4.0.v20110414.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-server/7.4.0.v20110414/jetty-server-7.4.0.v20110414-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/org/eclipse/jetty/jetty-server/7.4.0.v20110414/jetty-server-7.4.0.v20110414-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-servlet/7.4.0.v20110414/jetty-servlet-7.4.0.v20110414.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-servlet/7.4.0.v20110414/jetty-servlet-7.4.0.v20110414-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/org/eclipse/jetty/jetty-servlet/7.4.0.v20110414/jetty-servlet-7.4.0.v20110414-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-util/7.4.0.v20110414/jetty-util-7.4.0.v20110414.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-util/7.4.0.v20110414/jetty-util-7.4.0.v20110414-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/org/eclipse/jetty/jetty-util/7.4.0.v20110414/jetty-util-7.4.0.v20110414-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-webapp/7.4.0.v20110414/jetty-webapp-7.4.0.v20110414.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-webapp/7.4.0.v20110414/jetty-webapp-7.4.0.v20110414-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/org/eclipse/jetty/jetty-webapp/7.4.0.v20110414/jetty-webapp-7.4.0.v20110414-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-xml/7.4.0.v20110414/jetty-xml-7.4.0.v20110414.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-xml/7.4.0.v20110414/jetty-xml-7.4.0.v20110414-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/org/eclipse/jetty/jetty-xml/7.4.0.v20110414/jetty-xml-7.4.0.v20110414-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/mortbay/jetty/jsp-2.1-glassfish/2.1.v20100127/jsp-2.1-glassfish-2.1.v20100127.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/mortbay/jetty/jsp-api-2.1-glassfish/2.1.v20100127/jsp-api-2.1-glassfish-2.1.v20100127.jar"/>
+  <classpathentry kind="var" path="M2_REPO/junit/junit/4.0/junit-4.0.jar" sourcepath="M2_REPO/junit/junit/4.0/junit-4.0-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/junit/junit/4.0/junit-4.0-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/googlecode/mycontainer/mycontainer-annotations/1.2.37/mycontainer-annotations-1.2.37.jar" sourcepath="M2_REPO/com/googlecode/mycontainer/mycontainer-annotations/1.2.37/mycontainer-annotations-1.2.37-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/com/googlecode/mycontainer/mycontainer-annotations/1.2.37/mycontainer-annotations-1.2.37-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/googlecode/mycontainer/mycontainer-commons/1.2.37/mycontainer-commons-1.2.37.jar" sourcepath="M2_REPO/com/googlecode/mycontainer/mycontainer-commons/1.2.37/mycontainer-commons-1.2.37-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/com/googlecode/mycontainer/mycontainer-commons/1.2.37/mycontainer-commons-1.2.37-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/googlecode/mycontainer/mycontainer-cpscanner/1.2.37/mycontainer-cpscanner-1.2.37.jar" sourcepath="M2_REPO/com/googlecode/mycontainer/mycontainer-cpscanner/1.2.37/mycontainer-cpscanner-1.2.37-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/com/googlecode/mycontainer/mycontainer-cpscanner/1.2.37/mycontainer-cpscanner-1.2.37-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/googlecode/mycontainer/mycontainer-gae-web/1.2.37/mycontainer-gae-web-1.2.37.jar" sourcepath="M2_REPO/com/googlecode/mycontainer/mycontainer-gae-web/1.2.37/mycontainer-gae-web-1.2.37-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/com/googlecode/mycontainer/mycontainer-gae-web/1.2.37/mycontainer-gae-web-1.2.37-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/googlecode/mycontainer/mycontainer-kernel/1.2.37/mycontainer-kernel-1.2.37.jar" sourcepath="M2_REPO/com/googlecode/mycontainer/mycontainer-kernel/1.2.37/mycontainer-kernel-1.2.37-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/com/googlecode/mycontainer/mycontainer-kernel/1.2.37/mycontainer-kernel-1.2.37-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/googlecode/mycontainer/mycontainer-servlet-commons/1.2.37/mycontainer-servlet-commons-1.2.37.jar" sourcepath="M2_REPO/com/googlecode/mycontainer/mycontainer-servlet-commons/1.2.37/mycontainer-servlet-commons-1.2.37-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/com/googlecode/mycontainer/mycontainer-servlet-commons/1.2.37/mycontainer-servlet-commons-1.2.37-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/googlecode/mycontainer/mycontainer-web/1.2.37/mycontainer-web-1.2.37.jar" sourcepath="M2_REPO/com/googlecode/mycontainer/mycontainer-web/1.2.37/mycontainer-web-1.2.37-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/com/googlecode/mycontainer/mycontainer-web/1.2.37/mycontainer-web-1.2.37-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/googlecode/restitory/restitory-gae-api/2.0.44/restitory-gae-api-2.0.44.jar" sourcepath="M2_REPO/com/googlecode/restitory/restitory-gae-api/2.0.44/restitory-gae-api-2.0.44-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/com/googlecode/restitory/restitory-gae-api/2.0.44/restitory-gae-api-2.0.44-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/pyrata/external/org/mozilla/js/rhino/1.7R3/rhino-1.7R3.jar" sourcepath="M2_REPO/org/pyrata/external/org/mozilla/js/rhino/1.7R3/rhino-1.7R3-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/org/pyrata/external/org/mozilla/js/rhino/1.7R3/rhino-1.7R3-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.jar" sourcepath="M2_REPO/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-jdk14/1.6.1/slf4j-jdk14-1.6.1.jar" sourcepath="M2_REPO/org/slf4j/slf4j-jdk14/1.6.1/slf4j-jdk14-1.6.1-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home2/erick.zanardo/.m2/repository/org/slf4j/slf4j-jdk14/1.6.1/slf4j-jdk14-1.6.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/taglibs/standard/1.1.2/standard-1.1.2.jar" sourcepath="M2_REPO/taglibs/standard/1.1.2/standard-1.1.2-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2.jar" sourcepath="M2_REPO/xml-apis/xml-apis/1.0.b2/xml-apis-1.0.b2-sources.jar"/>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+</classpath>

@@ -1,5 +1,5 @@
 {
-  "name": "Sprite Foundry",
+  "name": "SpriteFoundry",
   "main": "./app/index.html",
   "window": {
     "toolbar": false,

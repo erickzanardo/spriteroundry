@@ -437,6 +437,19 @@
                         var img = $("<img/>");
                         img.appendTo(div);
                         img.spriteSheetImage(thisSpriteSheet, v);
+                        
+                        var button = $('<div><input type="button" value="Save"></div>');
+                        button.children('input').click(function() {
+                          var src = img.attr('src');
+                          chooseFileForSave(function(path) {
+                            var base64Data = src.replace(/^data:image\/png;base64,/, "");
+                            require('fs').writeFile(path, base64Data, 'base64', function(err) {
+                              if (err) console.log(err);
+                            });
+                          });
+                        })
+                        div.append(button);
+                        
                         div.fadeIn("fast", function() {
                             div.center();
                         });

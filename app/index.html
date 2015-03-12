@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -32,28 +32,29 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="toptoolbar">
-            <div class="userlogpanel allborder">
-                <a href="/s/login">Log with your google account</a>
-            </div>
-            <div class="newsprite allborder">
+        <div class="content">
+          <div class="mainwrapper">
+            <div class="mainlogo">
+                <img src="imgs/foundrylogo.png"/>
+              <div class="newsprite">
                 <a href="#">Create new spritesheet</a>
+              </div>
+          </div>
+          </div>
+          <div class="newSpriteDialog">
+            <h3>New Sprite</h3>
+            Name: <input type="text" class="name"/> <br />
+            Width: <input type="text" class="spriteWidth"/> <br />
+            Height: <input type="text" class="spriteHeight"/> <br />
+            Rows: <input type="text" class="spriteRows"/> <br />
+            Collumns: <input type="text" class="spriteCollumns"/> <br />
+            <input type="button" value="OK" class="okbutton"/>
+            <div class='preview'>
+                <h3>Preview</h3>
+                <div class="proportion"> Cells <span></span></div>
+                <canvas></canvas>
             </div>
-        </div>
-        <div class="content"></div>
-    </div>
-    <div class="newSpriteDialog">
-        <h3>New Sprite</h3>
-        Name: <input type="text" class="name"/> <br />
-        Width: <input type="text" class="spriteWidth"/> <br />
-        Height: <input type="text" class="spriteHeight"/> <br />
-        Rows: <input type="text" class="spriteRows"/> <br />
-        Collumns: <input type="text" class="spriteCollumns"/> <br />
-        <input type="button" value="OK" class="okbutton"/>
-        <div class='preview'>
-            <h3>Preview</h3>
-            <div class="proportion"> Cells <span/></div>
-            <canvas/>
+          </div>
         </div>
     </div>
 </body>

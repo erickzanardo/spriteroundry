@@ -1,0 +1,8 @@
+{
+  "name": "Sprite Foundry",
+  "main": "./app/index.html",
+  "window": {
+    "width": 1280,
+    "height": 1024
+  }
+}

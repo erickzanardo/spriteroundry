@@ -27,11 +27,6 @@
     spritefoundry = {};
 
     $(window).hashchange(function() {
-        if (!location.hash || location.hash == '#') {
-            location = '#index';
-            return;
-        }
-
         var hash = location.hash.substring(1);
         if (hash.indexOf("/")) {
             hash = hash.split("/")[0];
@@ -72,10 +67,6 @@
 
     pages["index"] = function(){
         $.holy('pages/templates/index.xml');
-    };
-
-    pages["about"] = function(){
-        $.holy('pages/templates/about.xml');
     };
 
     pages["sprite"] = function(){

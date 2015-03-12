@@ -12,9 +12,7 @@
         </div>
         <div class="canvas">
             <div class="tollbar">
-                {if spritefoundry.user}
                 <input type="button" value="Save" class="saveButton ttip" original-title="Shift + S"/>
-                {/if}
                 <input type="button" value="New Frame" class="newButton ttip" original-title="Shift + N"/>
                 <input type="button" value="Copy Sprite" class="copySpriteButton ttip" original-title="Copy the current selected frame"/>
                 |
@@ -90,11 +88,4 @@
             </div>
         </div>
     </template>
-    <script>
-        <![CDATA[
-            $(".translatedialog").hide();
-            $(".ttip").tipsy();
-            spriteEditorBinds(this.param);
-        ]]>
-    </script>
 </engine>

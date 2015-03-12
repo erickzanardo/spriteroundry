@@ -1,11 +1,16 @@
 (function($) {
     var sprite;
-    updateBindHandlerSprite = function(s) {
-        sprite = s;
-    }
+    var chooser;
+    var chooserCallback = null;
+
+    chooseFile = function(callback) {
+      chooserCallback = callback;
+      chooser.trigger('click');
+    };
 
     spriteEditorHandlingBinds = function(s, drawCanvas, bindSideImage) {
         sprite = s;
+
         $(".handlingtollbar .invertx").click(function() {
             var canvas = $("div.board canvas");
             var index = canvas.data("foundry.index");

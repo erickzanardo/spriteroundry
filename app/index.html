@@ -32,6 +32,8 @@
 </head>
 <body>
     <div class="wrapper">
+        <input style="display: none;" nwsaveas id="saveFileDialog" type="file" />
+        <input style="display: none;" id="openFileDialog" type="file" />
         <div class="content">
           <div class="mainwrapper">
             <div class="mainlogo">
@@ -39,15 +41,18 @@
               <div class="newsprite">
                 <a href="#">Create new spritesheet</a>
               </div>
+              <div class="loadsprite">
+                <a href="#">Open a spritesheet</a>
+              </div>
           </div>
           </div>
           <div class="newSpriteDialog">
             <h3>New Sprite</h3>
             Name: <input type="text" class="name"/> <br />
-            Width: <input type="text" class="spriteWidth"/> <br />
-            Height: <input type="text" class="spriteHeight"/> <br />
-            Rows: <input type="text" class="spriteRows"/> <br />
+            Canvas width: <input type="text" class="spriteWidth"/> <br />
+            Canvas height: <input type="text" class="spriteHeight"/> <br />
             Collumns: <input type="text" class="spriteCollumns"/> <br />
+            Rows: <input type="text" class="spriteRows"/> <br />
             <input type="button" value="OK" class="okbutton"/>
             <div class='preview'>
                 <h3>Preview</h3>

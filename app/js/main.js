@@ -4,6 +4,22 @@
         loading : true
     });
 
+    var chooserNew;
+    var chooserNewCallback = null;
+
+    chooseFileForSave = function(callback) {
+      chooserNewCallback = callback;
+      chooserNew.trigger('click');
+    };
+
+    var chooserOpen;
+    var chooserOpenCallback = null;
+
+    chooseFileForOpen = function(callback) {
+      chooserOpenCallback = callback;
+      chooserOpen.trigger('click');
+    };
+
     String.prototype.getLastNode = function(s) {
         if (!s) {
             s = 1;
@@ -37,6 +53,7 @@
     });
 
     spritefoundry.load = function(url, param, callback) {
+      alert('asd');
         $.ajax({
             url : url,
             dataType : 'holy',
@@ -45,43 +62,34 @@
         });
     };
 
-    pages["usersprites"] = function(){
-        if (!spritefoundry.user) {
-            location.href = "#index";
-            return;
-        }
-        $.ajax({
-            url: "r/spritesheet",
-            contentType: "application/json;charset=UTF-8",
-            data: {
-                query : JSON.stringify({
-                    type: "json",
-                    filter: {user: {EQ: spritefoundry.user.email}}
-                })
-            },
-            success: function(result) {
-                spritefoundry.load('pages/templates/usersprites.xml', result);
-            }
-        });
-    };
-
-    pages["index"] = function(){
-        $.holy('pages/templates/index.xml');
-    };
-
-    pages["sprite"] = function(){
-        var json = "r/spritesheet/" + location.hash.getLastNode();
-        $.getJSON(json, function(sprite){
-            spritefoundry.load('pages/templates/sprite.xml', sprite);
-        });
+    var openSprite = function(spriteSheet) {
+      spritefoundry.load('pages/templates/sprite.xml', spriteSheet, function() {
+        $(".translatedialog").hide();
+        $(".ttip").tipsy();
+        $("div.newSpriteDialog").xundialog();
+        spriteEditorBinds(spriteSheet);
+      });
     };
 
     $(document).ready(function() {
-
         $.loading({
             text : 'Carregando...',
             overlay : '#23557E',
             opacity: '60'
+        });
+
+        chooserNew = $('#saveFileDialog');
+        chooserNew.change(function(evt) {
+          var path = $(this).val();
+          chooserNewCallback(path);
+          chooserNewCallback = null;
+        });
+
+        chooserOpen = $('#openFileDialog');
+        chooserOpen.change(function(evt) {
+          var path = $(this).val();
+          chooserOpenCallback(path);
+          chooserOpenCallback = null;
         });
 
         $("div.newSpriteDialog input[type=text]").keypress(function(e) {
@@ -100,11 +108,21 @@
             return false;
         });
 
+        $("div.loadsprite a").click(function() {
+          chooseFileForOpen(function(path) {
+            var fs = require('fs');
+            fs.readFile(path, 'utf8', function(err, data) {
+              var spriteSheet = JSON.parse(data);
+              openSprite(spriteSheet);
+            });
+          });
+        });
+
         var parseNewDialog = function() {
             var w = parseInt($("div.newSpriteDialog .spriteWidth").val());
             var h = parseInt($("div.newSpriteDialog .spriteHeight").val());
             var c = parseInt($("div.newSpriteDialog .spriteCollumns").val());
-            var r = parseInt($("div.newSpriteDialog .spriteRows").val());;
+            var r = parseInt($("div.newSpriteDialog .spriteRows").val());
             var n = $("div.newSpriteDialog .name").val();
 
             var valid = true;
@@ -186,42 +204,8 @@
                 s.push(new Array(result.c));
             }
             spriteSheet.sprites.push(s);
-
-            if (spritefoundry.user) {
-                spriteSheet.user = spritefoundry.user.email;
-                $.ajax({
-                    url: "r/spritesheet",
-                    type: "POST",
-                    contentType: "application/json;charset=UTF-8",
-                    data: JSON.stringify(spriteSheet),
-                    success: function(id) {
-                        $("div.newSpriteDialog").xundialog();
-                        $("div.newSpriteDialog input[type=text]").val("");
-                        location.href = "#sprite/" + id.getLastNode();
-                    }
-                });
-            } else {
-                $("div.newSpriteDialog").xundialog();
-                spritefoundry.load('pages/templates/sprite.xml', spriteSheet);
-            }
+            openSprite(spriteSheet);
         });
-
-        $.ajax({
-            url: "s/loggeduser",
-            cache: false,
-            success: function(user) {
-                spritefoundry.user = user;
-
-                var html = $("<span>Welcome back " + user.name + "</span>! <a href='#usersprites'>Click here to see your spritesheets</a> <a href='/s/logout' class='logout'><img src='/imgs/logout.png'/><a/>" )
-                html.find("a").attr("href", "#");
-                $("div.userlogpanel").html(html);
-                $("div.userlogpanel").fadeIn();
-            },
-            error: function() {
-                $("div.userlogpanel").fadeIn();
-            }
-        });
-        $(window).hashchange();
     });
 
 })(jQuery);

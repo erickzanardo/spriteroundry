@@ -99,7 +99,7 @@
                     }
                 }
                 return false;
-            }
+            };
 
             list.push(y + "-" + x);
             var fillTool = function() {
@@ -160,7 +160,7 @@
             bindSideImage(mySprite, i);
         }, 1000);
         return selected.is(".move");
-    }
+    };
     
     var createSpriteCanvas = function(myIndex) {
         var canvas = $("<canvas />");
@@ -264,7 +264,8 @@
                     var sprite = thisSpriteSheet.sprites[i];
                     var canvas = createSpriteCanvas(i);
                     drawCanvas(canvas, sprite);
-                }
+                };
+
                 if ($(".canvas .board canvas").length) {
                     $(".canvas .board canvas").fadeOut("fast", function() {
                         $(this).remove();
@@ -308,7 +309,7 @@
                 var c = spriteSheet.colors[i];
                 var li = $("<li/>");
                 li.css("background-color", c);
-                li.data("foundry.color", c)
+                li.data("foundry.color", c);
                 li.click(colorSelectFunc);
                 $(".canvas .colors ul").append(li);
             }
@@ -358,25 +359,30 @@
         });
 
         $("div.tollbar .saveButton").click(function() {
-            $.ajax({
-                url: thisSpriteSheet._self,
-                contentType: "application/json;charset=UTF-8",
-                type: "PUT",
-                data: JSON.stringify(thisSpriteSheet),
-                success: function(id) {
-                    $.getJSON(id, function(json) {
-                        thisSpriteSheet = json;
-                        updateBindHandlerSprite(json);
-                        $("div.savedinfo").fadeIn("fast", function() {
-                            setTimeout(function() {
-                                $("div.savedinfo").fadeOut();
-                            },1500);
-                        });
-                    });
-                }
+          var save = function() {
+            var fs = require('fs');
+            fs.writeFile(
+              thisSpriteSheet.path,
+              JSON.stringify(thisSpriteSheet),
+              'utf8',
+              function() {
+              $("div.savedinfo").fadeIn("fast", function() {
+                setTimeout(function() {
+                        $("div.savedinfo").fadeOut();
+                    },1500);
+                });
             });
+          };
+          if (!thisSpriteSheet.path) {
+            chooseFileForSave(function(path) {
+              thisSpriteSheet.path = path;
+              save();
+            });
+          } else {
+            save();
+          }
         });
-        
+
         $("div.tollbar .newButton").click(newSprite);
 
         $("div.tollbar .copySpriteButton").click(function() {

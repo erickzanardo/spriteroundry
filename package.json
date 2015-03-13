@@ -5,5 +5,8 @@
     "toolbar": false,
     "width": 1280,
     "height": 1024
+  },
+  "dependencies": {
+    "imagejs": "0.0.8"
   }
 }

@@ -23,6 +23,10 @@
     <script type="text/javascript" src="js/graphics.js"></script>
     <script type="text/javascript" src="js/farbtastic.js"></script>
 
+    <!-- Pixelated -->
+    <script type="text/javascript" src="pixelated/pixelated.js"></script>
+    <link type="text/css" rel="stylesheet" href="pixelated/pixelated.css"/> 
+
     <link type="text/css" rel="stylesheet" href="css/main.css"/> 
     <link type="text/css" rel="stylesheet" href="css/jquery.dialog.css"/>
     <link type="text/css" rel="stylesheet" href="css/jquery.datatable.css"/>
@@ -31,36 +35,59 @@
     <link type="text/css" rel="stylesheet" href="css/farbtastic.css"/>
 </head>
 <body>
-    <div class="wrapper">
-        <input style="display: none;" nwsaveas id="saveFileDialog" type="file" />
-        <input style="display: none;" id="openFileDialog" type="file" />
-        <div class="content">
-          <div class="mainwrapper">
-            <div class="mainlogo">
-                <img src="imgs/foundrylogo.png"/>
-              <div class="newsprite">
-                <a href="#">Create new spritesheet</a>
-              </div>
-              <div class="loadsprite">
-                <a href="#">Open a spritesheet</a>
-              </div>
-          </div>
-          </div>
-          <div class="newSpriteDialog">
-            <h3>New Sprite</h3>
-            Name: <input type="text" class="name"/> <br />
-            Canvas width: <input type="text" class="spriteWidth"/> <br />
-            Canvas height: <input type="text" class="spriteHeight"/> <br />
-            Collumns: <input type="text" class="spriteCollumns"/> <br />
-            Rows: <input type="text" class="spriteRows"/> <br />
-            <input type="button" value="OK" class="okbutton"/>
-            <div class='preview'>
-                <h3>Preview</h3>
-                <div class="proportion"> Cells <span></span></div>
-                <canvas></canvas>
-            </div>
-          </div>
-        </div>
+  <input style="display: none;" nwsaveas id="saveFileDialog" type="file" />
+  <input style="display: none;" id="openFileDialog" type="file" />
+
+  <div class="content">
+    <div class="main-left">
+      <img src="imgs/foundrylogo.png"/>
     </div>
+    <div class="main-right">
+      <button class="pixel-button" id="newsprite">Create new spritesheet</button>
+      <button class="pixel-button" id="loadsprite">Open a spritesheet</button>
+      
+      <div class="pixel-panel">
+        <h5>Last opened files</h5>
+      </div>
+    </div>
+  </div>
+
+  <div class="pixel-modal newSpriteDialog">
+    <h4>
+      New sprite
+     <button class="pixel-modal-x" data-pyxel-action="close">X</button>
+    </h4>
+    <div class="pixel-panel-body">
+      <ul class="pixel-form">
+        <li class="required">
+          <label>Name</label>
+          <input type="text" class="name"/>
+        </li>
+        <li class="required">
+          <label>Canvas width</label>
+          <input type="text" class="spriteWidth"/>
+        </li>
+        <li class="required">
+          <label>Canvas height</label>
+          <input type="text" class="spriteHeight"/>
+        </li>
+        <li class="required">
+          <label>Collumns</label>
+          <input type="text" class="spriteCollumns"/>
+        </li>
+        <li class="required">
+          <label>Rows</label>
+          <input type="text" class="spriteRows"/>
+        </li>
+      </ul>
+
+      <button class="pixel-button-primary okbutton">OK</button>
+      <div class="pixel-panel preview">
+          <h4>Preview</h4>
+          <div class="proportion"> Cells <span></span></div>
+          <canvas></canvas>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

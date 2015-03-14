@@ -66,7 +66,7 @@
       spritefoundry.load('pages/templates/sprite.xml', spriteSheet, function() {
         $(".translatedialog").hide();
         $(".ttip").tipsy();
-        $("div.newSpriteDialog").xundialog();
+        pixelated.modal('div.newSpriteDialog', false);
         spriteEditorBinds(spriteSheet);
       });
     };
@@ -102,17 +102,14 @@
             }
         });
 
-        $("div.newsprite a").click(function() {
+        $("#newsprite").click(function() {
             $("div.newSpriteDialog div.preview").hide();
-            $("div.newSpriteDialog").xdialog({
-                overlay: '#23557E',
-                alpha: '3'
-            });
+            pixelated.modal('div.newSpriteDialog', true);
             $("div.newSpriteDialog input.name").focus();
             return false;
         });
 
-        $("div.loadsprite a").click(function() {
+        $("#loadsprite").click(function() {
           chooseFileForOpen(function(path) {
             var fs = require('fs');
             fs.readFile(path, 'utf8', function(err, data) {

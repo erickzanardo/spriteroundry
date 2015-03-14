@@ -1,40 +1,23 @@
-* {font-family: verdana; font-size: 12px;}
+.content {
+  width: 100%;
+  text-align: center;
+}
 
-h4, h3, h2, h1 {color: #555555; font-weight: bold;}
+.main-left, .main-right {
+  display: inline-block;
+  vertical-align: top;
+  margin: 50px;
+}
 
-h1 {font-size: 36px;}
-
-h2 {font-size: 24px;}
-
-h3 {font-size: 16px;}
-
-h4 {font-size: 14px;}
-
-.id {display: none;}
-
-a {font-weight: bold; color: #ababab;}
-
-body {background-color: #272727;}
-
-div.wrapper {width: 1024px; height: 98%; position: absolute; margin-left: -512px; left: 50%; background-color: #FFF; overflow: auto;}
-
-div.content {width: 100%;}
+.main-right {
+  width: 550px;
+  text-align: left;
+  padding-top: 150px;
+}
 
 div.toptoolbar {width: 100%; height: 30px; margin-top: 10px;}
 
 div.toptoolbar div {float: right; border: none; margin-left: 10px; background-color: #000; margin-right: 10px; height: 25px; padding-top: 7px; padding-left: 10px; padding-right: 10px; color: #FFF; margin-right: 25px;}
-
-div.content .mainwrapper {text-align: center; width: 100%;}
-
-div.content .mainwrapper .mainlogo {text-align: center; padding-top: 50px;}
-
-div.content .mainwrapper .learnmore {margin-top: 20px; font-size: 36px;}
-
-div.userlogpanel {display: none;}
-
-div.userlogpanel a.logout {position: absolute; right: 0px; top: 13px;}
-
-ul li {list-style: none;}
 
 div.sidebar {width: 161px; float: left; height: 600px; margin-left: 15px; margin-right: 5px; overflow: auto; position: relative; background-color: #F1F1F1;}
 
@@ -85,7 +68,7 @@ div.canvas div.board .righttoolbar {right: 10px; top: 5px; position: absolute;}
 
 div.canvas div.board .righttoolbar div {border: none; padding: 1px;}
 
-div.canvas div.board .righttoolbar div img {float: left};
+div.canvas div.board .righttoolbar div img {float: left;}
 
 div.canvas div.board .righttoolbar div input[type=checkbox] {float: left; margin-top: 5px;}
 
@@ -104,21 +87,11 @@ div.savedinfo {text-align: center; position: fixed; top: 105px; right: 120px; wi
 
 div.savedinfo img {margin-bottom: 5px;}
 
-div.deletedinfo {text-align: center; position: fixed; top: 70px; right: 110px; width: 80px; height: 90px; display: none;  background-color: #555; color: #fff; font-weight: bold;}}
+div.deletedinfo {text-align: center; position: fixed; top: 70px; right: 110px; width: 80px; height: 90px; display: none;  background-color: #555; color: #fff; font-weight: bold;}
 
 div.deletedinfo img {margin-bottom: 5px;}
 
 div.colorpicker div.preview {width: 188px; height: 30px; margin: 5px;}
-
-div.newSpriteDialog {display: none;}
-
-div.newSpriteDialog div.preview {display: none; position: absolute; right: -50; top: 0px; background-color: #FFF; padding: 5px;}
-
-div.newSpriteDialog input[type=text] {float: right; width: 150px; margin-left: 15px; margin-bottom: 5px;}
-
-div.newSpriteDialog input[type=button] {margin-top: 10px; float: right;}
-
-div.newSpriteDialog br {clear: both;}
 
 div.namecontainer {padding-left: 15px; cursor: pointer;}
 

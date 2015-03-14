@@ -72,6 +72,10 @@
     };
 
     $(document).ready(function() {
+        var gui = require('nw.gui');
+        var nwin = gui.Window.get();
+        nwin.maximize();
+
         $.loading({
             text : 'Carregando...',
             overlay : '#23557E',

@@ -1,5 +1,22 @@
 (function($) {
 
+    var addFileToHistory = function(path) {
+      var history = getFileHistory() || [];
+      if (history.indexOf(path) == -1) {
+        history.unshift(path);
+        if (history.length > 5) {
+          history.splice(0, 5);
+        }
+        localStorage.setItem('history', JSON.stringify(history));
+      }
+    };
+
+    var getFileHistory = function() {
+      var historyStr = localStorage.getItem('history');
+      var history = JSON.parse(historyStr);
+      return history;
+    };
+
     jQuery.ajaxSetup({
         loading : true
     });
@@ -53,7 +70,6 @@
     });
 
     spritefoundry.load = function(url, param, callback) {
-      alert('asd');
         $.ajax({
             url : url,
             dataType : 'holy',
@@ -109,15 +125,34 @@
             return false;
         });
 
+        var readAndOpenSpriteFile = function(path) {
+          var fs = require('fs');
+          fs.readFile(path, 'utf8', function(err, data) {
+            var spriteSheet = JSON.parse(data);
+            openSprite(spriteSheet);
+          });
+        };
+
         $("#loadsprite").click(function() {
           chooseFileForOpen(function(path) {
-            var fs = require('fs');
-            fs.readFile(path, 'utf8', function(err, data) {
-              var spriteSheet = JSON.parse(data);
-              openSprite(spriteSheet);
-            });
+            addFileToHistory(path);
+            readAndOpenSpriteFile(path);
           });
         });
+
+        // Last files
+        var history = getFileHistory();
+        if (history) {
+          var lastFiles = $('#last-files');
+          lastFiles.on('click', 'p', function() {
+            var path = $(this).text();
+            readAndOpenSpriteFile(path);
+          });
+          for (var i = 0; i < history.length; i++) {
+            var histPath = history[i];
+            lastFiles.append(['<p>', histPath, '</p>'].join(''));
+          }
+        }
 
         var parseNewDialog = function() {
             var w = parseInt($("div.newSpriteDialog .spriteWidth").val());

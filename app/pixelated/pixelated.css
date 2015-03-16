@@ -33,6 +33,7 @@
   box-shadow: 4px 4px 0px 0px #000000;
 }
 .pixel-panel {
+  margin-top: 10px;
   background-color: #ffffff;
   padding: 10px;
   border: 4px solid #000000;
@@ -51,6 +52,8 @@
   position: fixed;
   width: 600px;
   top: 120px;
+  left: 50%;
+  margin-left: -300px;
   z-index: 2;
   background-color: #ffffff;
   padding: 10px;
@@ -86,8 +89,8 @@
   z-index: 1;
   background-color: #ffffff;
   background-image: linear-gradient(45deg, #000000 25%, transparent 25%, transparent 75%, #000000 75%, #000000), linear-gradient(45deg, #000000 25%, transparent 25%, transparent 75%, #000000 75%, #000000);
-  background-size: 50px 50px;
-  background-position: 0 0, 25px 25px;
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
   opacity: 0.4;
 }
 .pixel-form {

@@ -15,6 +15,11 @@
   padding-top: 150px;
 }
 
+#last-files p {
+  cursor: pointer;
+  font-size: 15px;
+}
+
 div.toptoolbar {width: 100%; height: 30px; margin-top: 10px;}
 
 div.toptoolbar div {float: right; border: none; margin-left: 10px; background-color: #000; margin-right: 10px; height: 25px; padding-top: 7px; padding-left: 10px; padding-right: 10px; color: #FFF; margin-right: 25px;}

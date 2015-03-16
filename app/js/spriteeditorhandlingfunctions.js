@@ -11,7 +11,7 @@
     spriteEditorHandlingBinds = function(s, drawCanvas, bindSideImage) {
         sprite = s;
 
-        $(".handlingtollbar .invertx").click(function() {
+        $(".toolbar .invertx").click(function() {
             var canvas = $("div.board canvas");
             var index = canvas.data("foundry.index");
             var m = sprite.sprites[index];
@@ -32,7 +32,7 @@
             }, 1000);
         });
 
-        $(".handlingtollbar .inverty").click(function() {
+        $(".toolbar .inverty").click(function() {
             var canvas = $("div.board canvas");
             var index = canvas.data("foundry.index");
             var m = sprite.sprites[index];
@@ -52,7 +52,7 @@
             }, 1000);
         });
 
-        $(".handlingtollbar .translate").click(function() {
+        $(".toolbar .translate").click(function() {
             $("div.translatedialog").xdialog({
                 overlay: '#23557E',
                 alpha: '3'

@@ -2,7 +2,7 @@
   "name": "SpriteFoundry",
   "main": "./app/index.html",
   "window": {
-    "toolbar": false,
+    "toolbar": true,
     "width": 1280,
     "height": 1024
   },

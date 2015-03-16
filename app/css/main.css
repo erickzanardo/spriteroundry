@@ -20,9 +20,12 @@
   font-size: 15px;
 }
 
-div.toptoolbar {width: 100%; height: 30px; margin-top: 10px;}
 
-div.toptoolbar div {float: right; border: none; margin-left: 10px; background-color: #000; margin-right: 10px; height: 25px; padding-top: 7px; padding-left: 10px; padding-right: 10px; color: #FFF; margin-right: 25px;}
+.toolbar {
+  position: absolute;
+  top: 75px;
+  left: 15px;
+}
 
 div.sidebar {width: 161px; float: left; height: 600px; margin-left: 15px; margin-right: 5px; overflow: auto; position: relative; background-color: #F1F1F1;}
 
@@ -38,9 +41,27 @@ div.sidebar div.options img.trash {float: right; margin-top: 2px; margin-right: 
 
 div.sidebar div.options img.down {margin-top: 3px;}
 
-div.canvas {float: left; min-height: 600px; width: 800px;}
+.canvas .board {
+  height: 525px;
+  margin: 5px;
+  position: absolute;
+  overflow: hidden;
+  left: 200px;
+  top: 70px;
+  right: 5px;
+  bottom: 10px;
+}
 
-div.canvas div.colors {height: 20px; margin: 5px; background-color: #F1F1F1; padding: 2px;}
+.canvas {
+  position: relative;
+}
+
+.canvas .colors {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 100%;
+}
 
 div.canvas div.colors img {cursor: pointer; float: right; margin-top: 2px; margin-right: 2px;}
 
@@ -52,32 +73,29 @@ div.canvas div.colors ul li.selected {border: 1px solid #1c1f96;}
 
 div.canvas div.tollbar {height: 30px; margin: 5px;}
 
-div.canvas div.board {height: 525px; margin: 5px; width: 788px; position: relative; overflow: hidden; background-color: #f1f1f1;}
 
 div.canvas div.board canvas {border: 1px solid #a5a5a5; background-color: #fff;}
 
 /*Toolbars*/
-div.canvas div.board div.simpletoolbar {background-color: #e1e1e1; border-color: #a1a1a1; margin-top: 15px;}
+.canvas .board .toolbar img {
+  display: block;
+  cursor: pointer;
+  margin: 5px;
+  border-bottom: 1px solid transparent;
+  opacity: 0.5;
+}
 
-div.canvas div.board .toolbar { margin-left: 10px; top: 5px; position: absolute;}
-
-div.canvas div.board .toolbar img {display: block; cursor: pointer; margin: 5px; border-bottom: 1px solid transparent; opacity: 0.5;}
+div.canvas div.board .righttoolbar {
+  right: 10px; 
+  top: 75px; 
+  position: absolute;
+}
 
 div.canvas div.board .toolbar img.selected {opacity: 1; }
 
-div.canvas div.board .handlingtollbar { margin-left: 10px; margin-top: 5px; position: absolute; top: 140px;}
-
-div.canvas div.board .handlingtollbar img {display: block; cursor: pointer; margin: 5px;}
-
-div.canvas div.board .righttoolbar {right: 10px; top: 5px; position: absolute;}
-
 div.canvas div.board .righttoolbar div {border: none; padding: 1px;}
 
-div.canvas div.board .righttoolbar div img {float: left;}
-
 div.canvas div.board .righttoolbar div input[type=checkbox] {float: left; margin-top: 5px;}
-
-div.canvas div.board .zoombar {right: 10px; position: absolute; top: 55px;}
 
 div.canvas div.board .zoombar span.zoom {display: block; text-align: center; margin: 5px;}
 
@@ -101,10 +119,6 @@ div.colorpicker div.preview {width: 188px; height: 30px; margin: 5px;}
 div.namecontainer {padding-left: 15px; cursor: pointer;}
 
 .upperborder {-webkit-border-top-left-radius: 5px; -webkit-border-top-right-radius: 5px; -moz-border-radius-topleft: 5px; -moz-border-radius-topright: 5px; border-top-left-radius: 5px; border-top-right-radius: 5px;}
-
-.allborder {-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; border: 1px solid #A1A1A1;}
-
-.allborderbig {-webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; border: 1px solid #A1A1A1;}
 
 /*Button*/
 input[type=button] {

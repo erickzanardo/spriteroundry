@@ -366,7 +366,7 @@
             $(this).addClass("selected");
         });
 
-        $("div.tollbar .saveButton").click(function() {
+        $(".top-buttons .saveButton").click(function() {
           var save = function() {
             var fs = require('fs');
             fs.writeFile(
@@ -387,9 +387,9 @@
           }
         });
 
-        $("div.tollbar .newButton").click(newSprite);
+        $(".top-buttons .newButton").click(newSprite);
 
-        $("div.tollbar .copySpriteButton").click(function() {
+        $(".top-buttons .copySpriteButton").click(function() {
             var c = $("div.canvas div.board canvas");
             if (c.length) {
                 var sprite = thisSpriteSheet.sprites[c.data("foundry.index")];
@@ -417,7 +417,7 @@
             }
         });
 
-        $("div.tollbar .exportSpriteButton").click(function() {
+        $(".top-buttons .exportSpriteButton").click(function() {
             if (thisSpriteSheet.sprites && thisSpriteSheet.sprites.length) {
                 var v = thisSpriteSheet.spriteSheetColumns || 4;
                 var div = $("<div> <div>How many collumns? <input class='value' type='text' value='" + v + "'/></div><input type='button' class='ok' value='Ok'/><input type='button' class='cancel' value='Cancel'/></div>");
@@ -453,7 +453,7 @@
             }
         });
 
-        $("div.tollbar .animationSpriteButton").click(function() {
+        $(".top-buttons .animationSpriteButton").click(function() {
             if (thisSpriteSheet.sprites && thisSpriteSheet.sprites.length) {
                 var v = thisSpriteSheet.fps || 4;
                 var div = $("<div> <div>How many frames per second? <input class='value' type='text' value='" + v + "'/></div><input type='button' class='ok' value='Ok'/><input type='button' class='cancel' value='Cancel'/></div>");

@@ -24,46 +24,75 @@
 .toolbar {
   position: absolute;
   top: 75px;
-  left: 15px;
+  left: 10px;
 }
 
-div.sidebar {width: 161px; float: left; height: 600px; margin-left: 15px; margin-right: 5px; overflow: auto; position: relative; background-color: #F1F1F1;}
+.sidebar {
+    top: 70px;
+    width: 160px;
+    margin-left: 5px;
+    overflow: auto;
+    position: absolute;
+    bottom: 0px;
+}
 
-div.sidebar img.item {max-width: 140px; margin: 3px; border: 1px solid #e5e5e5; cursor: pointer; display: block; background-color: #FFF; opacity: 0.5;}
+.sidebar img.item {max-width: 140px; margin: 3px; border: 1px solid #e5e5e5; cursor: pointer; display: block; background-color: #FFF; opacity: 0.5;}
 
-div.sidebar img.item.selected {opacity: 1;}
+.sidebar img.item.selected {opacity: 1;}
 
-div.sidebar div.options {display: none; width: 136px; position: absolute; margin-left: 5px; background-color: #e1e1e1; border: 1px solid #000;}
+.sidebar div.options {display: none; width: 136px; position: absolute; margin-left: 5px; background-color: #e1e1e1; border: 1px solid #000;}
 
-div.sidebar div.options img {cursor: pointer;}
+.sidebar div.options img {cursor: pointer;}
 
-div.sidebar div.options img.trash {float: right; margin-top: 2px; margin-right: 2px;}
+.sidebar div.options img.trash {float: right; margin-top: 2px; margin-right: 2px;}
 
-div.sidebar div.options img.down {margin-top: 3px;}
+.sidebar div.options img.down {margin-top: 3px;}
 
 .canvas .board {
-  height: 525px;
-  margin: 5px;
   position: absolute;
   overflow: hidden;
   left: 200px;
   top: 70px;
   right: 5px;
-  bottom: 10px;
+  bottom: 0px;
+  background-color: #fff;
+  background-image: linear-gradient(45deg, #e5e5e5 25%, transparent 25%, transparent 75%, #e5e5e5 75%, #e5e5e5),
+      linear-gradient(45deg, #e5e5e5 25%, transparent 25%, transparent 75%, #e5e5e5 75%, #e5e5e5);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
 }
 
 .canvas {
-  position: relative;
+  position: absolute;
+  bottom: 5px;
+  top: 5px;
+  left: 5px;
+  right: 5px;
 }
 
 .canvas .colors {
   position: absolute;
   top: 10px;
-  left: 15px;
-  width: 100%;
+  left: 10px;
+  right: 10px;
 }
 
-div.canvas div.colors img {cursor: pointer; float: right; margin-top: 2px; margin-right: 2px;}
+.currentcolor {
+    top: 75px;
+    position: absolute; 
+    right: 10px; 
+    width: 50px; 
+    height: 50px; 
+    cursor: pointer; 
+    border: 6px solid #555;
+}
+
+.canvas .colors img {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
 
 div.canvas div.colors ul {padding: 0; display: block; margin: 0;}
 
@@ -87,7 +116,7 @@ div.canvas div.board canvas {border: 1px solid #a5a5a5; background-color: #fff;}
 
 div.canvas div.board .righttoolbar {
   right: 10px; 
-  top: 75px; 
+  top: 150px; 
   position: absolute;
 }
 
@@ -104,8 +133,6 @@ div.canvas div.board .zoombar span.zoom input {width: 50px; text-align: right;}
 div.canvas div.board .zoombar img {cursor: pointer; margin: 2px;}
 /*Toolbars*/
 
-div.currentcolor {position: fixed; top: 10px; right: 120px; width: 50px; height: 50px; cursor: pointer; border: 12px solid #e5e5e5;}
-
 div.savedinfo {text-align: center; position: fixed; top: 105px; right: 120px; width: 60px; height: 80px; display: none; background-color: #555; color: #fff; font-weight: bold;}
 
 div.savedinfo img {margin-bottom: 5px;}
@@ -119,41 +146,6 @@ div.colorpicker div.preview {width: 188px; height: 30px; margin: 5px;}
 div.namecontainer {padding-left: 15px; cursor: pointer;}
 
 .upperborder {-webkit-border-top-left-radius: 5px; -webkit-border-top-right-radius: 5px; -moz-border-radius-topleft: 5px; -moz-border-radius-topright: 5px; border-top-left-radius: 5px; border-top-right-radius: 5px;}
-
-/*Button*/
-input[type=button] {
-    -moz-box-shadow:inset 0px 1px 0px 0px #0a060a;
-    -webkit-box-shadow:inset 0px 1px 0px 0px #0a060a;
-    box-shadow:inset 0px 1px 0px 0px #0a060a;
-    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #5e5c5e), color-stop(1, #4d484d) );
-    background:-moz-linear-gradient( center top, #5e5c5e 5%, #4d484d 100% );
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#5e5c5e', endColorstr='#4d484d');
-    background-color:#5e5c5e;
-    -moz-border-radius:6px;
-    -webkit-border-radius:6px;
-    border-radius:6px;
-    border:1px solid #000000;
-    display:inline-block;
-    color:#ffffff;
-    font-family:arial;
-    font-size:15px;
-    font-weight:bold;
-    padding:2px 24px;
-    text-decoration:none;
-    text-shadow:1px 1px 0px #000000;
-    margin: 1px;
-    cursor: pointer;
-}
-input[type=button]:hover {
-    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #4d484d), color-stop(1, #5e5c5e) );
-    background:-moz-linear-gradient( center top, #4d484d 5%, #5e5c5e 100% );
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#4d484d', endColorstr='#5e5c5e');
-    background-color:#4d484d;
-}
-input[type=button]:active {
-    position:relative;
-    top:1px;
-}
 
 .innercontent {padding: 15px;}
 
@@ -172,3 +164,7 @@ input[type=button]:active {
 .translatedialog .buttons {text-align: right;}
 
 .aboutimage {max-width: 960px;}
+
+.top-buttons {
+    margin: 5px;
+}

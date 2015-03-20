@@ -3,26 +3,25 @@
         <div class="namecontainer">
             <h3>${param.name}</h3>
         </div>
-        <div class="sidebar allborder">
-            <div class="options allborder">
-                <img src="imgs/up.png" class="up"/>
-                <img src="imgs/down.png" class="down"/>
-                <img src="imgs/trash.png" class="trash"/>
-            </div>
-        </div>
         <div class="canvas">
-            <div class="pixel-panel">
-                <input type="button" value="Save" class="saveButton ttip" original-title="Shift + S"/>
-                <input type="button" value="New Frame" class="newButton ttip" original-title="Shift + N"/>
-                <input type="button" value="Copy Sprite" class="copySpriteButton ttip" original-title="Copy the current selected frame"/>
-                |
-                <input type="button" value="Export SpriteSheet" class="exportSpriteButton ttip" original-title="Show an image with all frames"/>
-                <input type="button" value="Animate" class="animationSpriteButton"/>
+            <div class="sidebar pixel-panel">
+                <div class="options allborder">
+                    <img src="imgs/up.png" class="up"/>
+                    <img src="imgs/down.png" class="down"/>
+                    <img src="imgs/trash.png" class="trash"/>
+                </div>
+            </div>
+            <div class="pixel-panel top-buttons">
+                <input type="button" value="Save" class="saveButton ttip pixel-button" original-title="Shift + S"/>
+                <input type="button" value="New Frame" class="newButton ttip pixel-button" original-title="Shift + N"/>
+                <input type="button" value="Copy Sprite" class="copySpriteButton ttip pixel-button" original-title="Copy the current selected frame"/>
+                <input type="button" value="Export SpriteSheet" class="exportSpriteButton ttip pixel-button" original-title="Show an image with all frames"/>
+                <input type="button" value="Animate" class="animationSpriteButton pixel-button"/>
             </div>
 
             <div class="board pixel-panel">
                 <div class="colors pixel-panel">
-                    <ul/>
+                    <ul></ul>
                     <img src="imgs/color.png" class="ttip" original-title="New palette color"/>
                 </div>
 
@@ -45,14 +44,16 @@
                         <img src="imgs/viewlayer.png"/>
                         <input type="checkbox" class="viewlayer"/>
                     </div>
-                    <span class="zoom"><input value="0"/>%</span>
-                    <img class="in" src="imgs/zoomin.png"/>
-                    <img class="reset" src="imgs/zoomreset.png"/>
-                    <img class="out" src="imgs/zoomout.png"/>
+                    <div class="zoombar">
+                        <span class="zoom"><input value="0"/>%</span>
+                        <img class="in" src="imgs/zoomin.png"/>
+                        <img class="reset" src="imgs/zoomreset.png"/>
+                        <img class="out" src="imgs/zoomout.png"/>
+                    </div>
                 </div>
+                <div class="currentcolor ttip" original-title="Change this color"/>
             </div>
         </div>
-        <div class="currentcolor ttip allborderbig" original-title="Change this color"/>
         <div class="savedinfo allborder">
             <img src="imgs/saved.png" />
             Saved!

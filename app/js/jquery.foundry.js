@@ -33,8 +33,7 @@
         if (!opts) {
             return;
         }
-        var div = $("<div class='confirmDialog'><div/><input type='button' class='yes' value='Yes'/><input type='button' class='no' value='No'/></div>");
-        div.hide();
+        var div = $('<div class="confirm-dialog pixel-modal"><div class="pixel-panel-body"></div><input type="button" class="yes pixel-button" value="Yes"/><input type="button" class="no pixel-button" value="No"/></div>');
         div.appendTo("body");
 
         div.children("div").text(opts.message);
@@ -43,6 +42,7 @@
             if (opts.onconfirm) {
                 opts.onconfirm();
             }
+            pixelated.modal('.confirm-dialog', false);
             div.xundialog();
             div.remove();
         });
@@ -51,14 +51,11 @@
             if (opts.oncancel) {
                 opts.oncancel();
             }
-            div.xundialog();
+            pixelated.modal('.confirm-dialog', false);
             div.remove();
         });
 
-        div.xdialog({
-            overlay: '#23557E',
-            alpha: '3'
-        });
+        pixelated.modal('.confirm-dialog', true);
     };
 
     foundry.inputDialog = function(opts) {

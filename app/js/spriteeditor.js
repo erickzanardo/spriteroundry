@@ -420,9 +420,8 @@
         $(".top-buttons .exportSpriteButton").click(function() {
             if (thisSpriteSheet.sprites && thisSpriteSheet.sprites.length) {
                 var v = thisSpriteSheet.spriteSheetColumns || 4;
-                var div = $("<div> <div>How many collumns? <input class='value' type='text' value='" + v + "'/></div><input type='button' class='ok' value='Ok'/><input type='button' class='cancel' value='Cancel'/></div>");
+                var div = $('<div class="pixel-modal export-sprite-modal"> <div class="pixel-panel-modal">How many collumns? <input class="value pixel-button" type="text" value="' + v + '"/></div><input type="button" class="ok pixel-button" value="Ok"/><input type="button" class="cancel pixel-button" value="Cancel"/></div>');
 
-                div.hide();
                 div.appendTo("body");
                 div.addClass("foundrydraggable");
                 div.draggable();
@@ -432,33 +431,26 @@
                       exporter(path, thisSpriteSheet, function() {
                         savedNotice();
 
-                        div.xundialog();
+                        pixelated.modal('.export-sprite-modal', false);
                         div.remove();
                       });
                     });
                 });
 
                 div.children("input.cancel").click(function() {
-                    div.xundialog();
+                    pixelated.modal('.export-sprite-modal', false);
                     div.remove();
                 });
 
-                div.xdialog({
-                    overlay: '#23557E',
-                    alpha: '3',
-                    onclose: function() {
-                        div.remove();
-                    }
-                });
+                pixelated.modal('.export-sprite-modal', true);
             }
         });
 
         $(".top-buttons .animationSpriteButton").click(function() {
             if (thisSpriteSheet.sprites && thisSpriteSheet.sprites.length) {
                 var v = thisSpriteSheet.fps || 4;
-                var div = $("<div> <div>How many frames per second? <input class='value' type='text' value='" + v + "'/></div><input type='button' class='ok' value='Ok'/><input type='button' class='cancel' value='Cancel'/></div>");
+                var div = $('<div class="pixel-modal preview-animation"> <h4> Preview animation <button class="pixel-modal-x" data-pyxel-action="close">X</button> </h4> <div>How many frames per second? <input class="value" type="text" value="' + v + '"/></div><input type="button" class="pixel-button ok" value="Ok"/><input type="button" class="pixel-button cancel" value="Cancel"/></div>');
 
-                div.hide();
                 div.appendTo("body");
                 div.addClass("foundrydraggable");
                 div.draggable();
@@ -503,7 +495,6 @@
                         };
 
                         div.fadeIn("fast", function() {
-                            div.center();
                             animate();
                         });
                     });
@@ -511,17 +502,11 @@
 
                 div.children("input.cancel").click(function() {
                     canvas.data("foundry.playing", false);
-                    div.xundialog();
+                    pixelated.modal('.preview-animation', false);
                     div.remove();
                 });
 
-                div.xdialog({
-                    overlay: '#23557E',
-                    alpha: '3',
-                    onclose: function() {
-                        div.remove();
-                    }
-                });
+                pixelated.modal('.preview-animation', true);
             }
         });
 

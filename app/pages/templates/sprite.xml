@@ -5,7 +5,7 @@
         </div>
         <div class="canvas">
             <div class="sidebar pixel-panel">
-                <div class="options allborder">
+                <div class="options pixel-panel">
                     <img src="imgs/up.png" class="up"/>
                     <img src="imgs/down.png" class="down"/>
                     <img src="imgs/trash.png" class="trash"/>
@@ -16,7 +16,7 @@
                 <input type="button" value="New Frame" class="newButton ttip pixel-button" original-title="Shift + N"/>
                 <input type="button" value="Copy Sprite" class="copySpriteButton ttip pixel-button" original-title="Copy the current selected frame"/>
                 <input type="button" value="Export SpriteSheet" class="exportSpriteButton ttip pixel-button" original-title="Show an image with all frames"/>
-                <input type="button" value="Animate" class="animationSpriteButton pixel-button"/>
+                <input type="button" value="Preview animation" class="animationSpriteButton pixel-button"/>
             </div>
 
             <div class="board pixel-panel">

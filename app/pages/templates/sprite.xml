@@ -17,7 +17,7 @@
                 <input type="button" value="Copy Sprite" class="copySpriteButton ttip pixel-button-primary" original-title="Copy the current selected frame"/>
                 <input type="button" value="Export SpriteSheet" class="exportSpriteButton ttip pixel-button-primary" original-title="Show an image with all frames"/>
                 <input type="button" value="Preview animation" class="animationSpriteButton pixel-button-primary"/>
-                <input type="button" value="Back" class="pixel-button" onclick="window.history.back();return false;"/>
+                <input type="button" value="Back" class="pixel-button" onclick="location.reload();return false;"/>
             </div>
 
             <div class="board pixel-panel">

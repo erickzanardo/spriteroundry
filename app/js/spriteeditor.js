@@ -427,12 +427,14 @@
                 div.draggable();
 
                 div.children("input.ok").click(function() {
+                    var collumns = $('.value').val();
+                    collumns = parseInt(collumns);
+                    thisSpriteSheet.spriteSheetColumns = collumns;
                     chooseFileForSave(function(path) {
                       exporter(path, thisSpriteSheet, function() {
-                        savedNotice();
-
                         pixelated.modal('.export-sprite-modal', false);
                         div.remove();
+                        $(".top-buttons .saveButton").click();
                       });
                     });
                 });

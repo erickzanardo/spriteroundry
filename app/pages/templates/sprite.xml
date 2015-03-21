@@ -12,11 +12,12 @@
                 </div>
             </div>
             <div class="pixel-panel top-buttons">
-                <input type="button" value="Save" class="saveButton ttip pixel-button" original-title="Shift + S"/>
-                <input type="button" value="New Frame" class="newButton ttip pixel-button" original-title="Shift + N"/>
-                <input type="button" value="Copy Sprite" class="copySpriteButton ttip pixel-button" original-title="Copy the current selected frame"/>
-                <input type="button" value="Export SpriteSheet" class="exportSpriteButton ttip pixel-button" original-title="Show an image with all frames"/>
-                <input type="button" value="Preview animation" class="animationSpriteButton pixel-button"/>
+                <input type="button" value="Save" class="saveButton ttip pixel-button-primary" original-title="Shift + S"/>
+                <input type="button" value="New Frame" class="newButton ttip pixel-button-primary" original-title="Shift + N"/>
+                <input type="button" value="Copy Sprite" class="copySpriteButton ttip pixel-button-primary" original-title="Copy the current selected frame"/>
+                <input type="button" value="Export SpriteSheet" class="exportSpriteButton ttip pixel-button-primary" original-title="Show an image with all frames"/>
+                <input type="button" value="Preview animation" class="animationSpriteButton pixel-button-primary"/>
+                <input type="button" value="Back" class="pixel-button" onclick="window.history.back();return false;"/>
             </div>
 
             <div class="board pixel-panel">
